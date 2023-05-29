@@ -1,0 +1,129 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: 0.3s ease-in-out;
+  &--scroll {
+    background: rgba(0, 0, 0, 0.31);
+  }
+  &__box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1380px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 35px;
+    padding-bottom: 25px;
+  }
+  &__left {
+    position: relative;
+    flex: 0 0 calc(50% - 300px);
+    max-width: calc(50% - 300px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    position: relative;
+  }
+  &__logo-img {
+    position: relative;
+  }
+  &__logo-link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  &__logo-title {
+    font-style: italic;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 8px;
+  }
+  &__center {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__nav {
+    position: relative;
+  }
+  &__nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    li {
+      position: relative;
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      padding: 12px 22px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      text-transform: uppercase;
+      color: #7e7c9f;
+      transition: 0.3s ease-in-out;
+      @include desktop-hover() {
+        color: #fff;
+      }
+    }
+  }
+  &__right {
+    position: relative;
+    flex: 0 0 calc(50% - 300px);
+    max-width: calc(50% - 300px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  &__sing-up {
+    position: relative;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    padding: 12px 34px;
+    border: 1px solid #7e7c9f;
+    border-radius: 8px 0px 0px 8px;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    @include desktop-hover() {
+      background: #fff;
+      color: #ee2732;
+      border-color: #fff;
+    }
+  }
+  &__sing-in {
+    position: relative;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 13px 40px;
+    background: #ee2732;
+    border-radius: 0px 8px 8px 0px;
+    transition: 0.3s ease-in-out;
+    @include desktop-hover() {
+      background: #fff;
+      color: #ee2732;
+    }
+  }
+}

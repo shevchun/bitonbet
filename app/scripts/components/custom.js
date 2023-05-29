@@ -50,28 +50,27 @@ export default () => {
 //     })
 //   })
 
-//   $(window).on('scroll', function scrollPage() {
-//     const heightWindow = 50
-//     if ($(this).scrollTop() >= heightWindow) {
-//       $('.header').addClass('header--scroll')
-//     } else {
-//       $('.header').removeClass('header--scroll')
-//     }
-//   })
+  $(window).on('scroll', function scrollPage() {
+    const heightWindow = 50
+    if ($(this).scrollTop() >= heightWindow) {
+      $('.header').addClass('header--scroll')
+    } else {
+      $('.header').removeClass('header--scroll')
+    }
+  })
 
-//   $('.table-content__list a').on('click', function clickDownScroll() {
-//     const marginTop = 110
-//     const scrollEl = $(this).attr('href')
-//     if ($(scrollEl).length !== 0) {
-//       $('html, body').animate(
-//         {
-//           scrollTop: $(scrollEl).offset().top - marginTop,
-//         },
-//         500
-//       )
-//     }
-//     return false
-//   })
+  $('.header__nav-list a').on('click', function clickDownScroll() {
+    const scrollEl = $(this).attr('href')
+    if ($(scrollEl).length !== 0) {
+      $('html, body').animate(
+        {
+          scrollTop: $(scrollEl).offset().top - 136,
+        },
+        500
+      )
+    }
+    return false
+  })
 
 //   $('.js-scroll-top').on('click', () => {
 //     $('html, body').animate({

@@ -1,0 +1,38 @@
+.btn-box {
+  position: relative;
+  display: inline-flex;
+  vertical-align: top;
+  align-items: center;
+}
+.btn-arrow {
+  position: absolute;
+  left: 150px;
+  top: 100%;
+}
+.btn-title {
+  position: relative;
+  flex: 0 0 auto;
+  margin-right: 27px;
+  font-family: "Reenie Beanie", cursive;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 17px;
+  letter-spacing: -0.1em;
+}
+.btn {
+  position: relative;
+  text-decoration: none;
+  padding: 21px 57px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  background: #ee2732;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+  @include desktop-hover() {
+    background: #fff;
+    color: #ee2732;
+  }
+}
