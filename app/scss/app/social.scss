@@ -4,6 +4,11 @@
   margin: 0 0 33px -10px;
   display: flex;
   align-items: center;
+  @include response(1200px) {
+    justify-content: center;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
   li {
     position: relative;
   }

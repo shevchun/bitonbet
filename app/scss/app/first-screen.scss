@@ -2,6 +2,9 @@
   position: relative;
   padding-top: 116px;
   z-index: 1;
+  @include response(1200px) {
+    padding-bottom: 31px;
+  }
   &__bg {
     position: absolute;
     top: 0;
@@ -18,12 +21,18 @@
     position: relative;
     display: flex;
     align-items: center;
+    @include response(1200px) {
+      display: block;
+    }
   }
   &__left {
     position: relative;
     flex: 0 0 565px;
     max-width: 565px;
     width: 100%;
+    @include response(1200px) {
+      max-width: 100%;
+    }
   }
   &__title {
     position: relative;
@@ -32,9 +41,19 @@
     font-size: 48px;
     line-height: 66px;
     text-transform: uppercase;
+    @include response(1200px) {
+      font-size: 24px;
+      line-height: 33px;
+      text-align: center;
+      margin-bottom: 0;
+    }
   }
   &__btn-box {
     position: relative;
+    @include response(1200px) {
+      display: flex;
+      justify-content: center;
+    }
   }
   &__btn-title {
     position: relative;
@@ -45,10 +64,13 @@
   &__right {
     position: relative;
     flex: 0 0 auto;
+    @include response(1200px) {
+      margin-bottom: 20px;
+      margin-right: -11px;
+    }
   }
   &__img {
     display: block;
     position: relative;
   }
 }
-

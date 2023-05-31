@@ -6,7 +6,8 @@
 }
 .btn-arrow {
   position: absolute;
-  left: 150px;
+  left: 50%;
+  margin-left: -54px;
   top: 100%;
 }
 .btn-title {
@@ -18,6 +19,9 @@
   font-size: 40px;
   line-height: 17px;
   letter-spacing: -0.1em;
+  @include response(1200px) {
+    font-size: 26px;
+  }
 }
 .btn {
   position: relative;
@@ -31,6 +35,11 @@
   background: #ee2732;
   border-radius: 8px;
   transition: 0.3s ease-in-out;
+  @include response(1200px) {
+    font-size: 13px;
+    line-height: 16px;
+    padding: 14px 36px;
+  }
   @include desktop-hover() {
     background: #fff;
     color: #ee2732;

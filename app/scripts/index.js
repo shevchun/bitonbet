@@ -8,11 +8,18 @@ globalThis.$ = $
 globalThis.jQuery = $
 
 document.addEventListener('DOMContentLoaded', () => {
-  // globalThis.Tabs = new Tabs()
   svg4everybody()
   custom()
 })
 
-// $(window).on('load resize', () => {
-//   if ($(window).width() < 1200) {} 
-// })
+$(window).on('load resize', () => {
+  if ($(window).width() < 1200) {
+    $('.header__mobile-box').append($('.header__nav'))
+    $('.first-screen__btn-box').insertAfter($('.first-screen__right'))
+    $('.contact__mobile-box').insertAfter($('.contact__right'))
+  } else {
+    $('.header__center').append($('.header__nav'))
+    $('.first-screen__btn-box').insertAfter($('.first-screen__title'))
+    $('.contact__mobile-box').insertAfter($('.contact__text'))
+  }
+})

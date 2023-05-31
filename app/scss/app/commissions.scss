@@ -3,9 +3,15 @@
   padding-top: 120px;
   padding-bottom: 170px;
   z-index: 1;
+  @include response(1200px) {
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
   &__bg {
     position: absolute;
     top: -154px;
+    top: 50%;
+    transform: translateY(-50%);
     left: 0;
     right: 0;
     img {
@@ -22,21 +28,37 @@
   }
   &__title {
     margin-bottom: 167px;
+    @include response(1200px) {
+      margin-bottom: 82px;
+    }
   }
   &__percent {
     position: relative;
     margin-bottom: 132px;
+    @include response(1200px) {
+      margin-bottom: 63px;
+    }
   }
   &__percent-title {
     font-weight: 800;
     font-size: 96px;
     position: relative;
+    @include response(1200px) {
+      font-size: 40px;
+    }
   }
   &__percent-decor {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    @include response(1200px) {
+      width: 180px;
+      svg {
+        width: 100%;
+        height: auto;
+      }
+    }
   }
   &__text {
     position: relative;
@@ -44,6 +66,11 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 27px;
+    @include response(1200px) {
+      padding-left: 40px;
+      padding-right: 40px;
+      font-size: 13px;
+    }
   }
   &__btn-box {
     position: relative;

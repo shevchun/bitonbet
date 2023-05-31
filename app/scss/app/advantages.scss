@@ -17,6 +17,9 @@
   &__title {
     position: relative;
     margin-bottom: 80px;
+    @include response(1200px) {
+      margin-bottom: 47px;
+    }
   }
   &__list {
     position: relative;
@@ -36,10 +39,26 @@
     margin-left: 14px;
     margin-top: 12px;
     text-align: center;
+    @include response(1200px) {
+      flex: 0 0 calc(50% - 14px);
+      max-width: calc(50% - 14px);
+    }
+    @include response(767px) {
+      flex: 0 0 calc(100% - 14px);
+      max-width: calc(100% - 14px);
+      padding: 24px 30px;
+      min-height: 238px;
+    }
   }
   &__item-img {
     position: relative;
     margin-bottom: 19px;
+    @include response(1200px) {
+      margin-bottom: 15px;
+      img {
+        width: 65px;
+      }
+    }
   }
   &__item-title {
     position: relative;
@@ -48,6 +67,11 @@
     font-size: 18px;
     line-height: 31px;
     text-transform: uppercase;
+    @include response(1200px) {
+      font-size: 16px;
+      line-height: 31px;
+      margin-bottom: 8px;
+    }
   }
   &__item-text {
     position: relative;
@@ -55,5 +79,9 @@
     font-size: 16px;
     line-height: 25px;
     color: #7e7c9f;
+    @include response(1200px) {
+      font-size: 12px;
+      line-height: 23px;
+    }
   }
 }
